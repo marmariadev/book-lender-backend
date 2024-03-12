@@ -11,3 +11,15 @@ Este proyecto es un sistema de backend para una aplicación de gestión de bibli
 - Express.js: Framework para construir la API REST de forma eficiente.
 - TypeORM: Facilita la interacción con la base de datos PostgreSQL.
 - PostgreSQL: Gestiona los datos de la aplicación de manera relacional.
+
+## Historias de usuario
+
+- **Como bibliotecario, quiero añadir nuevos libros al sistema** para mantener actualizado el inventario de la biblioteca.
+- **Como bibliotecario, quiero listar todos los libros disponibles** para ver qué libros hay en la biblioteca.
+- **Como bibliotecario, quiero actualizar la información de los libros** para corregir errores o actualizar datos.
+- **Como bibliotecario, quiero eliminar libros** que ya no están disponibles o son obsoletos.
+- **Como bibliotecario, quiero registrar nuevos autores en el sistema** para asociarlos con sus respectivos libros.
+- **Como bibliotecario, quiero ver una lista de todos los autores** para facilitar la búsqueda de sus libros.
+- **Como usuario, quiero registrar un préstamo de libro** para llevar libros a casa.
+- **Como usuario, quiero devolver un libro** para evitar multas y que otros lo puedan prestar.
+- **Como bibliotecario, quiero ver todos los préstamos activos** para gestionar las devoluciones y multas.
