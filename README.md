@@ -23,3 +23,41 @@ Este proyecto es un sistema de backend para una aplicación de gestión de bibli
 - **Como usuario, quiero registrar un préstamo de libro** para llevar libros a casa.
 - **Como usuario, quiero devolver un libro** para evitar multas y que otros lo puedan prestar.
 - **Como bibliotecario, quiero ver todos los préstamos activos** para gestionar las devoluciones y multas.
+
+## Esquema de Base de Datos
+
+#### book
+
+- `id` INT, PRIMARY KEY
+- `title` VARCHAR
+- `publication_year` INT
+- `copy_count` INT
+- `author_id` INT, FOREIGN KEY to author
+
+#### author
+
+- `id` INT, PRIMARY KEY
+- `first_name` VARCHAR
+- `last_name` VARCHAR
+- `nationality` VARCHAR
+
+#### loan
+
+- `id` INT, PRIMARY KEY
+- `loan_date` DATE
+- `return_date` DATE, nullable
+- `book_id` INT, FOREIGN KEY to book
+- `user_id` INT, FOREIGN KEY to user
+- `status` ENUM('active', 'returned')
+
+#### user
+
+- `id` INT, PRIMARY KEY
+- `name` VARCHAR
+- `email` VARCHAR
+
+### Relationships
+
+- **author** can have multiple **books** (One to Many).
+- **book** can have multiple **loans** (One to Many).
+- **user** can have multiple **loans** (One to Many).
